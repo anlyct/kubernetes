@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rocky
+  namespace: newyork
+spec:
+  containers:
+    - name: shadow
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+    - name: bingo
+      image: busybox
+      command: ["sleep", "3600"]
